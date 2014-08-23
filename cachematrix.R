@@ -21,12 +21,12 @@ makeCacheMatrix <- function(x = matrix()) {  ## create a matrix
                 xI                      ## Result getter (matrix inverse)
         }
         
-        list(set = set, get = get, setInv = setInv, getInv = getInv)  ## make subfunctions externally available
+        list(set = set, get = get, setInv = setInv, getInv = getInv)  ## make internal functions externally available
 }
 
 
 ## Compute the inverse of the special matrix. If the inverse has already been
-## calculated and the value has not changed, then return the cached value.
+## calculated and the value has not changed, then return the cached value...
 
 cacheSolve <- function(x, ...) {
        
